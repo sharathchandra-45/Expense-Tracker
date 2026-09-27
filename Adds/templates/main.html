@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div style="background:#4e73df; padding:15px; text-align:center;">
+    <a href="/home" style="color:white; margin:15px;">Home</a>
+    <a href="/about" style="color:white; margin:15px;">About</a>
+    <a href="/contact" style="color:white; margin:15px;">Contact</a>
+    <a href="/" style="color:white; margin:15px;">Logout</a>
+</div>
+
+<div class="container">
+
+    <h2>💰 Expense Tracker</h2>
+
+    <!-- Add Expense Section -->
+    <h3>Add New Expense</h3>
+    <form method="POST">
+        <input type="text" name="title" placeholder="Expense Title" required>
+        <input type="text" name="amount" placeholder="Amount" required>
+        <input type="date" name="date" required>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <hr>
+
+    <!-- Expense List Section -->
+    <h3>Expense History</h3>
+
+    <table border="1" width="100%" cellpadding="8">
+        <tr style="background:#1cc88a; color:white;">
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+
+        {% for e in expenses %}
+        <tr>
+            <td>{{ e[1] }}</td>
+            <td>₹ {{ e[2] }}</td>
+            <td>{{ e[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+</body>
+</html>

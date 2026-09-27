@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Expense Tracker</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.navbar {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: block;
+    padding: 12px;
+    background: #4facfe;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0077ff;
+}
+
+.logout {
+    background: #ff4d4d;
+}
+
+.logout:hover {
+    background: #cc0000;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>💰 Expense Tracker</h1>
+</div>
+
+<div class="container">
+    <h2>Welcome to Expense Tracker</h2>
+
+    <div class="card-links">
+        <a href="/main" class="btn">📊 Go to Expense Page</a>
+        <a href="/about" class="btn">ℹ About</a>
+        <a href="/contact" class="btn">📞 Contact</a>
+        <a href="/" class="btn logout">🚪 Logout</a>
+    </div>
+</div>
+
+</body>
+</html>
